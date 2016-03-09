@@ -3,14 +3,14 @@ $errors = '';
 $myemail = 'mail@djthompson.io';//<-----Put Your email address here.
 if(empty($_POST['name'])  || 
    empty($_POST['email']) || 
-   empty($_POST['message']))
+   empty($_POST['comment']))
 {
     $errors .= "\n Error: all fields are required";
 }
 
 $name = $_POST['name']; 
 $email_address = $_POST['email']; 
-$message = $_POST['message']; 
+$comment = $_POST['comment']; 
 
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
@@ -23,8 +23,8 @@ if( empty($errors))
 {
 	$to = $myemail; 
 	$email_subject = "iofolio form submission from $name";
-	$email_body = "$name sent you a message from the contact form on iofolio. ".
-	" here are the details:\n name: $name \n email: $email_address \n message \n $message"; 
+	$email_body = "$name sent you a comment from the contact form on iofolio. ".
+	" here are the details:\n name: $name \n email: $email_address \n comment \n $comment"; 
 	
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
