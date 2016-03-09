@@ -1,6 +1,7 @@
 <?php 
 $errors = '';
 $myemail = 'mail@djthompson.io';//<-----Put Your email address here.
+/*
 if(empty($_POST['name'])  || 
    empty($_POST['email']) || 
    empty($_POST['comment']))
@@ -18,7 +19,7 @@ $email_address))
 {
     $errors .= "\n Error: Invalid email address";
 }
-
+*/
 if( empty($errors))
 {
 	$to = $myemail; 
